@@ -1,15 +1,8 @@
 <?php
-class User
-{
-    private $name;
+require_once("Connection.php");
 
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
-    public function getName()
-    {
-        return $this->name;
-    }
+function showUserList(){
+  $connection=connect();
+  $users=$connection->query("select * from users");
+  return $users;
 }

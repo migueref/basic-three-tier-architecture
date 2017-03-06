@@ -1,8 +1,12 @@
+<?php
+require_once('../../application/controllers/usersController.php');
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Integrando bootstrap</title>
+    <title>Mysqli connection</title>
     <link rel="stylesheet" href="../src/css/bootstrap.css">
   </head>
   <body>
@@ -16,7 +20,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Brand</a>
+          <a class="navbar-brand" href="#">Miguel Rea</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -59,6 +63,15 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
+    <h2>Registered Users</h2>
+    <?php
+      while ($user = $users->fetch_assoc()) {
+    ?>
+    <div class="form-control">
+      <?php echo $user['username']; ?>
+
+    </div>
+    <?php } ?>
     <script src="../src/js/jquery-3.1.1.min.js" charset="utf-8"></script>
     <script src="../src/js/bootstrap.js" charset="utf-8"></script>
   </body>
