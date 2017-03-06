@@ -72,6 +72,10 @@ require_once('../../application/controllers/usersController.php');
 
     </div>
     <?php } ?>
+    <form class="" action="../../application/controllers/usersController.php" method="POST" enctype="application/x-www-form-urlencoded">
+      <input type="hidden" name="display" value="display">
+      <input type="submit" name="" value="Display">
+    </form>
     <script src="../src/js/jquery-3.1.1.min.js" charset="utf-8"></script>
     <script src="../src/js/bootstrap.js" charset="utf-8"></script>
   </body>
